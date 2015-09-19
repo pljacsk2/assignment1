@@ -39,7 +39,7 @@ var callback = function (req, res) { // req -> request object; res -> response o
         var r = parseFloat(params.r);
 
         res.writeHead(200, {'Content-Type': 'text/plain'}); // send response header
-        res.end(fibRecursion(r)); // send response body
+        res.end(fibRecursion(r).toString()); // send response body
     }
 
     else{ // if route is not in any of the above
